@@ -1,0 +1,410 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: crimson;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.welcome-message h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navbar Styles */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.navbar ul li .logout-button {
+    background-color: limegreen;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar ul li .logout-button:hover {
+    background-color: #32cd32;
+    transform: scale(1.1);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Permissions Section */
+.permissions {
+    margin: 20px 0;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.permissions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.permissions ul li {
+    background-color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content-section {
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    cursor: pointer;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+.content-section h2:hover {
+    background-color: #333;
+}
+
+.content-section h2::after {
+    content: '▼';
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.content-section h2.open::after {
+    transform: rotate(180deg);
+}
+
+.content-list {
+    margin: 20px 0;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list li {
+    background-color: #444;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #555;
+    transition: transform 0.3s;
+}
+
+.content-list li:hover {
+    transform: scale(1.02);
+}
+
+.content-list p {
+    margin: 10px 0;
+}
+
+/* Create Content Section */
+.create-content-section {
+    margin: 20px 0;
+}
+
+.create-content-section h2 {
+    cursor: pointer;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+.create-content-section h2:hover {
+    background-color: #333;
+}
+
+.create-content-section h2::after {
+    content: '▼';
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.create-content-section h2.open::after {
+    transform: rotate(180deg);
+}
+
+.create-content-form {
+    margin: 20px 0;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    animation: slideIn 0.5s ease-out;
+}
+
+.create-content-form input,
+.create-content-form textarea {
+    width: 98%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fff;
+}
+
+/* Buttons */
+.action-button {
+    display: inline-block;
+    background-color: limegreen;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.action-button:hover {
+    background-color: #32cd32;
+    transform: scale(1.1);
+}
+
+.delete-button {
+    background-color: crimson;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #dc143c;
+    transform: scale(1.1);
+}
+
+.update-button {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.update-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.1);
+}
+
+.see-more-button {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.see-more-button:hover {
+    background-color: #138496;
+    transform: scale(1.1);
+}
+
+/* User Data Container */
+.user-data-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.user-data-container h1 {
+    margin-top: 0;
+}
+
+.user-data-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.user-data-container table, th, td {
+    border: 1px solid #444;
+}
+
+.user-data-container th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Content Published by Users Box */
+.content-count-box {
+    margin-top: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.content-count-box h2 {
+    margin-top: 0;
+}
+
+.content-count-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.content-count-box table, th, td {
+    border: 1px solid #555;
+}
+
+.content-count-box th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: crimson;
+    color: #fff;
+}
+
+table td {
+    background-color: #333;
+}
+
+table tr:nth-child(even) td {
+    background-color: #444;
+}
+
+/* Settings Container */
+.settings-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    animation: fadeIn 1s ease-in;
+}
+
+.settings-container h1 {
+    margin-top: 0;
+}
+
+.settings-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.settings-container select,
+.settings-container input[type="checkbox"] {
+    margin: 5px 0;
+}
+
+.settings-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+.settings-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.settings-container button {
+    margin-top: 20px;
+}
